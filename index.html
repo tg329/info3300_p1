@@ -14,9 +14,24 @@
 <body>
   <p>test</p>
   <script>
-    d3.csv('Hot100.csv')
+    d3.csv('bestSongs.csv', d3.autoType)
       .then((data) => {
         console.log(data);
+
+        const svg = d3.select("svg#songs");
+        const width = svg.attr("width");
+        const height = svg.attr("height");
+        const margins = { top: 30, right: 10, bottom: 50, left: 50 };
+        const chartWidth = width - margins.left - margins.right;
+        const chartHeight = height - margins.top - margins.bottom;
+        let chartArea = svg.append("g")
+            .attr("transform", "translate(" + margins.left + "," + margins.top + ")");
+
+
+
+
+
+        
       });
   </script>
 </body>
