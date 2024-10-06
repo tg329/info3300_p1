@@ -1,0 +1,361 @@
+title,artist,top genre,year,bpm,energy,danceability ,dB,liveness,valence,duration,acousticness,speechiness ,popularity
+Yellow,Coldplay,permanent wave,2000,173,66,43,-7,23,28,267,0,3,90
+The Real Slim Shady,Eminem,detroit hip hop,2000,105,66,95,-4,5,76,284,3,6,89
+In the End,Linkin Park,alternative metal,2000,105,86,56,-6,21,40,217,1,6,87
+Stan,Eminem,detroit hip hop,2000,80,77,78,-4,52,51,404,4,24,85
+Ms. Jackson,Outkast,atl hip hop,2000,95,81,84,-6,8,61,271,14,27,83
+It's My Life,Bon Jovi,glam metal,2000,120,91,55,-4,35,54,224,3,5,82
+Kryptonite,3 Doors Down,alternative metal,2000,99,87,55,-6,17,54,234,1,3,81
+It Wasn't Me,Shaggy,dance pop,2000,95,61,85,-5,31,65,228,6,7,80
+Oops!...I Did It Again,Britney Spears,dance pop,2000,95,83,75,-5,36,89,211,30,4,80
+Dancing in the Moonlight,Toploader,british alternative rock,2000,119,86,63,-3,35,87,233,6,3,79
+Rollin' (Air Raid Vehicle),Limp Bizkit,alternative metal,2000,96,93,60,-3,21,71,214,1,17,79
+Angel,Shaggy,dance pop,2000,171,77,74,-3,4,81,235,12,18,78
+Better Off Alone,Alice Deejay,bouncy house,2000,137,88,67,-6,28,79,215,0,6,78
+Ride Wit Me,Nelly,dance pop,2000,102,70,85,-6,24,72,292,6,5,77
+Beautiful Day,U2,irish rock,2000,136,93,54,-6,20,39,248,2,6,76
+The Middle,Jimmy Eat World,alternative metal,2001,162,85,64,-5,6,90,166,4,5,83
+Whenever Wherever,Shakira,colombian pop,2001,108,83,79,-5,20,87,196,24,4,83
+How You Remind Me,Nickelback,alternative metal,2001,172,76,45,-5,10,54,224,0,3,81
+Drops of Jupiter (Tell Me),Train,dance pop,2001,79,64,48,-6,15,50,260,15,3,80
+Island In The Sun,Weezer,alternative rock,2001,115,81,65,-6,17,66,200,1,3,80
+One More Time,Daft Punk,electro,2001,123,70,61,-9,33,48,320,2,13,79
+Clint Eastwood,Gorillaz,alternative hip hop,2001,168,69,66,-9,7,53,341,3,17,78
+Family Affair,Mary J. Blige,dance pop,2001,93,55,91,-4,9,97,266,13,4,78
+Lady - Hear Me Tonight,Modjo,disco house,2001,126,81,72,-6,6,87,307,1,4,78
+Can't Get You out of My Head,Kylie Minogue,australian dance,2001,126,56,77,-8,12,96,231,3,3,77
+In Too Deep,Sum 41,alternative metal,2001,116,84,57,-6,6,77,207,0,5,77
+Let Me Blow Ya Mind,Eve,contemporary r&b,2001,90,56,91,-4,7,90,230,24,11,77
+Smooth Criminal,Alien Ant Farm,alternative metal,2001,127,96,65,-4,14,87,209,0,6,77
+Fat Lip,Sum 41,alternative metal,2001,197,91,40,-5,7,63,178,0,14,76
+L'Amour Toujours,Gigi D'Agostino,eurodance,2001,139,88,64,-4,36,74,242,8,3,76
+Without Me,Eminem,detroit hip hop,2002,112,67,91,-3,24,66,290,0,7,90
+The Scientist,Coldplay,permanent wave,2002,146,44,56,-7,11,21,310,73,2,86
+Till I Collapse,Eminem,detroit hip hop,2002,171,85,55,-3,8,10,298,6,19,86
+Can't Stop,Red Hot Chili Peppers,alternative rock,2002,91,94,62,-3,17,88,269,2,5,83
+Clocks,Coldplay,permanent wave,2002,131,75,58,-7,18,26,308,60,3,83
+Complicated,Avril Lavigne,canadian pop,2002,78,78,59,-6,30,43,245,6,5,81
+She Will Be Loved - Radio Mix,Maroon 5,pop,2002,102,66,65,-6,10,47,259,23,3,81
+This Love,Maroon 5,pop,2002,95,86,71,-5,9,81,206,5,4,81
+Dilemma,Nelly,dance pop,2002,168,55,73,-8,20,61,289,23,14,80
+Sing For The Moment,Eminem,detroit hip hop,2002,164,82,67,-4,4,19,340,0,14,80
+All The Things She Said,t.A.T.u.,dance pop,2002,90,83,60,-6,11,38,214,4,4,79
+Like a Stone,Audioslave,alternative metal,2002,108,57,61,-5,10,52,294,1,3,79
+A Thousand Miles,Vanessa Carlton,lilith,2002,95,83,56,-4,16,27,237,32,4,78
+Here Without You,3 Doors Down,alternative metal,2002,144,53,56,-7,21,23,239,5,3,78
+Rock Your Body,Justin Timberlake,dance pop,2002,101,71,89,-6,5,82,267,20,14,78
+Numb,Linkin Park,alternative metal,2003,110,86,50,-4,64,24,186,0,4,87
+Seven Nation Army,The White Stripes,alternative rock,2003,124,45,74,-8,34,28,232,0,7,86
+Bring Me To Life,Evanescence,alternative metal,2003,95,94,33,-3,24,30,236,1,7,84
+In Da Club,50 Cent,east coast hip hop,2003,90,71,90,-3,7,78,193,26,37,84
+Toxic,Britney Spears,dance pop,2003,143,84,77,-4,24,92,199,2,11,84
+Hey Ya!,Outkast,atl hip hop,2003,80,97,73,-2,17,97,235,10,7,83
+The Reason,Hoobastank,alternative metal,2003,83,67,47,-5,16,7,233,1,3,83
+If I Ain't Got You,Alicia Keys,neo soul,2003,118,44,61,-9,10,17,229,60,11,82
+Where Is The Love?,Black Eyed Peas,dance pop,2003,94,70,83,-3,13,81,273,11,18,82
+Crazy In Love (feat. Jay-Z),Beyoncé,pop,2003,99,77,65,-7,7,68,236,0,23,80
+Faint,Linkin Park,alternative metal,2003,135,98,55,-4,7,59,163,11,13,80
+P.I.M.P.,50 Cent,east coast hip hop,2003,85,77,71,-3,4,85,249,5,35,80
+Are You Gonna Be My Girl,Jet,garage rock,2003,105,95,61,-3,15,54,214,0,9,78
+I Miss You,blink-182,alternative metal,2003,110,71,42,-8,9,59,227,0,5,78
+21 Questions,50 Cent,east coast hip hop,2003,93,81,65,-4,4,90,224,35,30,77
+Mockingbird,Eminem,detroit hip hop,2004,84,68,64,-4,16,25,251,21,27,92
+Mr. Brightside,The Killers,alternative rock,2004,148,91,35,-5,10,24,223,0,7,87
+Somewhere Only We Know,Keane,neo mellow,2004,172,67,45,-4,8,30,237,6,3,87
+Yeah! (feat. Lil Jon & Ludacris),Usher,atl hip hop,2004,105,79,89,-5,4,58,250,2,11,84
+Gasolina,Daddy Yankee,latin hip hop,2004,96,80,85,-7,8,74,193,32,6,83
+Lose Yourself,Eminem,detroit hip hop,2004,171,74,69,-5,34,6,322,1,26,82
+All Falls Down,Kanye West,chicago rap,2004,91,73,66,-5,14,43,224,15,48,81
+Numb / Encore,JAY-Z,east coast hip hop,2004,107,79,69,-4,58,75,206,6,17,81
+Take Me Out,Franz Ferdinand,alternative rock,2004,105,66,28,-9,14,53,237,0,4,81
+American Idiot,Green Day,modern rock,2004,186,99,38,-2,37,77,176,0,6,80
+My Boo,Usher,atl hip hop,2004,86,51,66,-8,5,68,223,26,12,80
+Drop It Like It's Hot,Snoop Dogg,g funk,2004,92,63,89,-4,10,66,266,19,22,78
+Unwritten,Natasha Bedingfield,dance pop,2004,100,80,71,-6,8,63,259,1,4,78
+Call on Me - Radio Mix,Eric Prydz,edm,2004,126,84,60,-7,84,45,171,0,38,77
+Let Me Love You,Mario,dance pop,2004,95,58,66,-9,12,56,257,24,9,76
+Hips Don't Lie (feat. Wyclef Jean),Shakira,colombian pop,2005,100,82,78,-6,41,76,218,28,7,86
+Feel Good Inc.,Gorillaz,alternative hip hop,2005,139,71,82,-7,61,77,223,1,18,85
+Fix You,Coldplay,permanent wave,2005,138,42,21,-9,11,12,296,16,3,85
+Hate It Or Love It,The Game,gangster rap,2005,100,79,80,-5,12,44,206,14,21,83
+Candy Shop,50 Cent,east coast hip hop,2005,125,57,61,-8,38,76,209,3,47,82
+Before He Cheats,Carrie Underwood,classic oklahoma country,2005,148,75,52,-3,12,29,200,27,4,81
+Gold Digger,Kanye West,chicago rap,2005,93,70,63,-6,6,62,208,2,35,81
+How to Save a Life,The Fray,neo mellow,2005,122,74,64,-4,10,36,263,27,4,81
+Love,Keyshia Cole,hip pop,2005,117,52,69,-4,10,32,255,6,3,81
+Pon de Replay,Rihanna,barbadian pop,2005,99,64,78,-8,10,50,247,0,16,81
+Temperature,Sean Paul,dance pop,2005,125,60,95,-5,7,82,219,11,7,81
+Hey There Delilah,Plain White T's,modern rock,2005,104,29,66,-11,11,30,233,87,3,80
+Just A Lil Bit,50 Cent,east coast hip hop,2005,97,69,49,-7,32,53,238,3,41,80
+Lonely,Akon,dance pop,2005,90,53,63,-8,26,62,236,34,3,80
+"Sugar, We're Goin Down",Fall Out Boy,emo,2005,162,84,49,-5,12,57,229,1,8,80
+Promiscuous,Nelly Furtado,canadian latin,2006,114,97,81,-6,15,87,242,6,5,85
+Smack That,Akon,dance pop,2006,119,74,94,-5,11,92,212,32,5,83
+Chasing Cars,Snow Patrol,irish rock,2006,104,60,56,-5,13,14,268,20,3,82
+Maneater,Nelly Furtado,canadian latin,2006,133,78,80,-5,12,79,259,3,4,82
+Say It Right,Nelly Furtado,canadian latin,2006,117,87,87,-6,5,81,223,5,14,82
+Teenagers,My Chemical Romance,emo,2006,112,86,46,-3,18,86,162,5,6,82
+Back To Black,Amy Winehouse,british soul,2006,123,42,40,-14,9,38,241,13,4,81
+Snow (Hey Oh),Red Hot Chili Peppers,alternative rock,2006,105,90,43,-4,12,60,335,12,5,81
+Put Your Records On,Corinne Bailey Rae,british soul,2006,96,51,74,-8,13,54,215,17,4,80
+SexyBack (feat. Timbaland),Justin Timberlake,dance pop,2006,117,58,97,-6,5,96,243,6,8,80
+Crazy,Gnarls Barkley,atl hip hop,2006,112,59,86,-5,11,64,177,5,3,79
+Dani California,Red Hot Chili Peppers,alternative rock,2006,96,91,56,-2,35,73,282,2,4,79
+So Sick,Ne-Yo,dance pop,2006,93,57,45,-8,19,58,207,25,31,79
+Supermassive Black Hole,Muse,modern rock,2006,120,92,67,-4,9,78,212,5,4,79
+Welcome to the Black Parade,My Chemical Romance,emo,2006,97,91,22,-4,22,24,311,0,8,79
+Flashing Lights,Kanye West,chicago rap,2007,90,63,64,-8,39,43,238,4,4,86
+Stronger,Kanye West,chicago rap,2007,104,72,62,-8,41,49,312,1,15,83
+The Way I Are,Timbaland,dance pop,2007,115,81,73,-6,32,77,179,18,10,83
+Homecoming,Kanye West,chicago rap,2007,87,75,67,-7,12,92,203,34,19,82
+What I've Done,Linkin Park,alternative metal,2007,120,93,62,-5,14,29,206,1,3,82
+Gimme More,Britney Spears,dance pop,2007,113,84,79,-3,7,38,251,25,3,81
+This Is The Life,Amy Macdonald,scottish singer-songwriter,2007,95,88,63,-5,7,85,184,26,3,81
+Bleed It Out,Linkin Park,alternative metal,2007,140,97,53,-4,61,60,166,11,5,80
+Fluorescent Adolescent,Arctic Monkeys,garage rock,2007,112,83,65,-5,12,79,184,0,3,80
+The Pretender,Foo Fighters,alternative metal,2007,173,96,43,-4,3,37,269,0,4,80
+Thnks fr th Mmrs,Fall Out Boy,emo,2007,155,89,46,-5,11,59,204,1,6,80
+Beautiful Girls,Sean Kingston,dance pop,2007,130,66,76,-6,26,77,225,15,7,79
+Can't Tell Me Nothing,Kanye West,chicago rap,2007,80,62,60,-6,82,10,272,1,4,79
+Give It To Me,Timbaland,dance pop,2007,111,71,98,-4,8,82,234,17,6,79
+Kids,MGMT,alternative rock,2007,123,93,45,-4,36,17,303,0,7,79
+Viva La Vida,Coldplay,permanent wave,2008,138,62,49,-7,11,42,242,10,3,88
+Heartless,Kanye West,chicago rap,2008,88,65,79,-6,25,65,211,5,14,87
+Umbrella,Rihanna,barbadian pop,2008,174,83,58,-5,4,57,276,1,13,85
+Sex on Fire,Kings of Leon,modern rock,2008,153,91,54,-6,14,37,203,0,5,83
+Don't Stop The Music,Rihanna,barbadian pop,2008,123,67,84,-6,5,54,267,3,6,82
+I'm Yours,Jason Mraz,acoustic pop,2008,151,44,70,-9,10,71,243,56,4,82
+Low (feat. T-Pain),Flo Rida,dance pop,2008,128,61,92,-6,14,30,231,9,8,82
+Poker Face,Lady Gaga,art pop,2008,119,81,85,-5,12,79,237,12,8,82
+Just Dance,Lady Gaga,art pop,2008,119,74,82,-5,18,75,242,3,3,81
+Walking On A Dream,Empire of the Sun,australian dance,2008,127,70,87,-6,6,72,198,26,5,81
+Disturbia,Rihanna,barbadian pop,2008,125,81,71,-5,17,72,239,9,6,80
+American Boy,Estelle,neo soul,2008,118,73,69,-3,7,52,285,17,38,79
+Forever,Chris Brown,r&b,2008,120,82,67,-4,18,44,279,4,5,79
+Kiss Me Thru The Phone,Soulja Boy,atl hip hop,2008,150,71,76,-4,7,80,193,2,11,79
+Love Story,Taylor Swift,pop,2008,119,74,62,-4,8,31,236,13,3,79
+Bad Romance,Lady Gaga,art pop,2009,119,92,70,-4,8,71,295,0,4,84
+Empire State Of Mind,JAY-Z,east coast hip hop,2009,174,96,49,-2,46,81,277,3,39,84
+I Gotta Feeling,Black Eyed Peas,dance pop,2009,128,77,74,-6,51,61,289,9,3,83
+Party In The U.S.A.,Miley Cyrus,pop,2009,96,70,65,-5,9,47,202,0,4,83
+Dog Days Are Over,Florence + The Machine,baroque pop,2009,150,81,50,-5,12,26,253,3,9,82
+Rude Boy,Rihanna,barbadian pop,2009,174,75,56,-4,8,81,223,11,13,81
+Run This Town,JAY-Z,east coast hip hop,2009,87,92,63,-2,26,44,268,28,29,81
+Down,Jay Sean,dance pop,2009,132,68,73,-4,8,73,213,1,3,80
+Fireflies,Owl City,indietronica,2009,180,66,51,-7,12,47,228,3,4,80
+Monster,Skillet,alternative metal,2009,135,96,64,-2,8,69,178,4,7,79
+Replay,Iyaz,dance pop,2009,91,75,71,-6,17,20,182,17,7,78
+Right Round,Flo Rida,dance pop,2009,125,67,72,-7,23,71,205,1,6,78
+Secrets,OneRepublic,piano rock,2009,148,76,52,-6,12,38,225,7,4,77
+She Wolf,Shakira,colombian pop,2009,122,69,87,-7,23,87,189,28,4,77
+The Climb,Miley Cyrus,pop,2009,161,60,34,-6,14,30,235,6,3,77
+Sure Thing,Miguel,r&b,2010,81,61,68,-8,19,50,195,3,10,91
+"Hey, Soul Sister",Train,dance pop,2010,97,89,67,-4,8,80,217,19,4,84
+Love The Way You Lie,Eminem,detroit hip hop,2010,87,93,75,-5,52,64,263,24,23,84
+Only Girl (In The World),Rihanna,barbadian pop,2010,126,71,79,-4,6,64,235,11,4,84
+Baby,Justin Bieber,canadian pop,2010,65,86,73,-5,11,54,214,4,14,83
+TiK ToK,Kesha,dance pop,2010,120,84,76,-3,29,71,200,10,14,83
+Dynamite,Taio Cruz,dance pop,2010,120,78,75,-4,4,82,203,0,9,82
+"Moves Like Jagger - Studio Recording From ""The Voice"" Performance",Maroon 5,pop,2010,128,76,72,-4,32,62,201,1,5,82
+Not Afraid,Eminem,detroit hip hop,2010,115,95,86,-1,21,67,248,53,26,82
+S&M,Rihanna,barbadian pop,2010,128,68,77,-5,9,84,244,1,4,82
+Danza Kuduro,Don Omar,latin hip hop,2010,89,92,40,-5,5,88,199,8,28,81
+DJ Got Us Fallin' In Love (feat. Pitbull),Usher,atl hip hop,2010,120,86,66,-3,8,65,221,3,11,81
+Just the Way You Are,Bruno Mars,dance pop,2010,109,84,64,-5,6,42,221,1,4,81
+Super Bass,Nicki Minaj,hip pop,2010,127,86,72,-4,60,67,200,27,20,81
+All Of The Lights,Kanye West,chicago rap,2010,142,80,53,-3,18,22,300,8,7,80
+Ni**as In Paris,JAY-Z,east coast hip hop,2011,140,86,79,-6,35,78,219,13,31,86
+Set Fire to the Rain,Adele,british soul,2011,108,67,60,-4,11,45,243,0,2,86
+Paradise,Coldplay,permanent wave,2011,140,59,45,-7,8,21,279,5,3,85
+We Found Love,Rihanna,barbadian pop,2011,128,77,73,-4,11,60,215,3,4,85
+"Give Me Everything (feat. Ne-Yo, Afrojack & Nayer)",Pitbull,dance pop,2011,129,94,67,-3,30,53,252,19,16,84
+Pumped Up Kicks,Foster The People,indietronica,2011,128,71,73,-6,10,97,240,14,3,84
+Love You Like A Love Song,Selena Gomez & The Scene,pop,2011,117,68,86,-4,7,92,188,8,5,83
+Rolling in the Deep,Adele,british soul,2011,105,77,73,-5,5,51,228,14,3,83
+Someone Like You,Adele,british soul,2011,135,32,56,-8,10,29,285,89,3,83
+Stereo Hearts (feat. Adam Levine),Gym Class Heroes,dance pop,2011,90,80,65,-3,27,80,211,3,10,83
+A Thousand Years,Christina Perri,pop,2011,139,41,42,-7,11,16,285,31,3,82
+Levels - Radio Edit,Avicii,edm,2011,126,89,58,-6,31,46,200,5,3,82
+Glad You Came,The Wanted,boy band,2011,127,85,72,-4,11,45,198,3,6,80
+On The Floor,Jennifer Lopez,dance pop,2011,130,78,73,-5,7,57,285,11,5,80
+Tongue Tied,GROUPLOVE,indie rock,2011,113,94,56,-6,16,37,218,1,4,80
+When I Was Your Man,Bruno Mars,dance pop,2012,73,28,61,-9,9,39,214,93,4,89
+Locked out of Heaven,Bruno Mars,dance pop,2012,144,70,73,-4,31,87,233,5,4,88
+Demons,Imagine Dragons,modern rock,2012,90,71,51,-3,27,43,178,19,3,86
+Lost,Frank Ocean,lgbtq+ hip hop,2012,123,60,91,-5,17,50,234,3,23,86
+What Makes You Beautiful,One Direction,boy band,2012,125,79,73,-2,6,89,200,1,7,86
+Payphone,Maroon 5,pop,2012,110,75,74,-5,29,55,231,2,4,85
+Call Me Maybe,Carly Rae Jepsen,canadian pop,2012,120,58,78,-7,11,66,193,1,4,83
+Can't Hold Us (feat. Ray Dalton),Macklemore & Ryan Lewis,pop rap,2012,146,92,64,-4,9,85,258,3,8,83
+Don't You Worry Child - Radio Edit,Swedish House Mafia,edm,2012,129,84,61,-3,12,44,213,11,5,83
+Feel So Close - Radio Edit,Calvin Harris,dance pop,2012,128,92,71,-3,20,92,206,0,3,83
+Just Give Me a Reason (feat. Nate Ruess),P!nk,dance pop,2012,95,55,78,-7,13,44,243,35,5,83
+Timber (feat. Ke$ha),Pitbull,dance pop,2012,130,96,58,-4,14,79,204,3,10,83
+Titanium (feat. Sia),David Guetta,big room,2012,126,79,60,-4,13,30,245,7,10,83
+Classic,MKTO,pop,2012,102,79,72,-5,16,76,175,4,12,82
+Treasure,Bruno Mars,dance pop,2012,116,69,87,-5,32,94,179,4,4,82
+Another Love,Tom Odell,chill pop,2013,123,54,45,-9,9,13,244,70,4,92
+Sweater Weather,The Neighbourhood,modern alternative rock,2013,124,81,61,-3,10,40,240,5,3,91
+Do I Wanna Know?,Arctic Monkeys,garage rock,2013,85,53,55,-8,22,41,272,19,3,89
+Why'd You Only Call Me When You're High?,Arctic Monkeys,garage rock,2013,92,63,69,-6,10,80,161,5,4,88
+Wake Me Up,Avicii,edm,2013,124,78,53,-6,16,64,247,0,5,87
+All of Me,John Legend,neo soul,2013,120,26,42,-7,13,33,270,92,3,86
+Counting Stars,OneRepublic,piano rock,2013,122,71,66,-5,12,48,257,7,4,86
+Safe And Sound,Capital Cities,metropopolis,2013,118,82,66,-5,10,77,193,0,3,84
+Story of My Life,One Direction,boy band,2013,121,66,60,-6,12,29,245,23,5,84
+Get Lucky (Radio Edit) [feat. Pharrell Williams and Nile Rodgers],Daft Punk,electro,2013,116,81,79,-9,10,86,248,4,4,83
+All I Want,Kodaline,irish pop,2013,187,41,19,-10,8,16,306,17,5,82
+Love Me,Lil Wayne,hip hop,2013,125,63,67,-6,9,50,255,1,3,82
+Stolen Dance,Milky Chance,german pop,2013,114,58,88,-9,8,73,314,43,4,82
+Wrecking Ball,Miley Cyrus,pop,2013,120,42,53,-6,11,35,221,41,3,82
+Dark Horse,Katy Perry,pop,2013,132,59,65,-6,17,35,216,0,5,81
+Night Changes,One Direction,boy band,2014,120,52,67,-8,12,37,227,86,4,89
+Blank Space,Taylor Swift,pop,2014,96,70,76,-5,9,57,232,10,5,88
+I Love You So,The Walters,chicago indie,2014,76,65,57,-5,12,47,160,58,4,88
+I'm Not The Only One,Sam Smith,pop,2014,82,49,68,-6,8,49,239,53,4,87
+Photograph,Ed Sheeran,pop,2014,108,38,61,-10,10,20,259,61,5,87
+Style,Taylor Swift,pop,2014,95,79,59,-6,12,49,231,0,4,87
+The Nights,Avicii,edm,2014,126,84,53,-5,25,65,177,2,4,87
+A Sky Full of Stars,Coldplay,permanent wave,2014,125,68,55,-6,21,16,268,1,3,86
+Maps,Maroon 5,pop,2014,120,71,74,-6,6,88,190,2,3,85
+One Last Time,Ariana Grande,pop,2014,125,59,63,-5,10,10,197,9,3,85
+Only Love Can Hurt Like This,Paloma Faith,british soul,2014,91,89,57,-5,33,30,233,10,8,85
+Riptide,Vance Joy,folk-pop,2014,102,73,48,-7,15,51,204,43,4,85
+Shake It Off,Taylor Swift,pop,2014,160,80,65,-5,33,94,219,6,17,85
+Shut Up and Dance,WALK THE MOON,dance rock,2014,128,87,58,-4,26,62,199,1,6,85
+Stay With Me,Sam Smith,pop,2014,84,42,42,-6,11,18,173,59,4,85
+The Hills,The Weeknd,canadian contemporary r&b,2015,113,56,59,-7,14,14,242,7,5,88
+Stressed Out,Twenty One Pilots,modern rock,2015,170,64,73,-6,6,65,202,5,14,87
+Daddy Issues,The Neighbourhood,modern alternative rock,2015,85,52,59,-9,12,34,260,7,3,86
+The Less I Know The Better,Tame Impala,australian psych,2015,117,74,64,-4,17,79,216,1,3,86
+Hymn for the Weekend,Coldplay,permanent wave,2015,90,69,49,-6,33,41,258,21,4,85
+Love Yourself,Justin Bieber,canadian pop,2015,100,38,61,-10,28,52,234,84,44,85
+Can't Feel My Face,The Weeknd,canadian contemporary r&b,2015,108,77,71,-6,11,58,214,11,4,84
+Don't,Bryson Tiller,kentucky hip hop,2015,97,36,77,-6,10,19,198,22,20,84
+Ride,Twenty One Pilots,modern rock,2015,75,71,65,-5,11,57,215,1,4,84
+See You Again (feat. Charlie Puth),Wiz Khalifa,hip hop,2015,80,48,69,-8,6,28,230,37,8,84
+Uptown Funk (feat. Bruno Mars),Mark Ronson,pop soul,2015,115,61,86,-7,3,93,270,1,8,84
+Waiting For Love,Avicii,edm,2015,128,74,58,-4,20,61,231,31,5,84
+Sorry,Justin Bieber,canadian pop,2015,100,76,65,-4,30,41,201,8,5,83
+Alright,Kendrick Lamar,conscious hip hop,2015,110,77,80,-6,8,56,219,7,24,82
+Bitch Better Have My Money,Rihanna,barbadian pop,2015,103,73,78,-5,26,40,219,5,6,82
+Starboy,The Weeknd,canadian contemporary r&b,2016,186,59,68,-7,14,49,230,14,28,93
+One Dance,Drake,canadian hip hop,2016,104,63,79,-6,33,37,174,1,5,88
+Pink + White,Frank Ocean,lgbtq+ hip hop,2016,160,55,55,-7,42,55,185,67,11,88
+Say You Won't Let Go,James Arthur,pop,2016,85,56,36,-7,9,49,211,70,6,87
+Closer,The Chainsmokers,electropop,2016,95,52,75,-6,11,66,245,41,3,86
+goosebumps,Travis Scott,hip hop,2016,130,73,84,-3,15,43,244,8,5,86
+Love On The Brain,Rihanna,barbadian pop,2016,172,64,51,-5,8,38,224,7,5,86
+That's What I Like,Bruno Mars,dance pop,2016,134,56,85,-5,9,86,207,1,4,86
+Let Me Love You,DJ Snake,edm,2016,100,72,65,-5,14,16,206,9,3,85
+Redbone,Childish Gambino,atl hip hop,2016,160,35,75,-11,12,60,327,17,10,85
+Needed Me,Rihanna,barbadian pop,2016,111,31,67,-8,8,30,192,11,24,84
+This Is What You Came For,Calvin Harris,dance pop,2016,124,93,63,-3,15,47,222,20,3,84
+We Don't Talk Anymore (feat. Selena Gomez),Charlie Puth,pop,2016,100,56,73,-8,18,35,218,62,13,84
+7 Years,Lukas Graham,danish pop,2016,120,47,77,-6,39,34,237,29,5,83
+Cake By The Ocean,DNCE,dance pop,2016,119,75,77,-5,4,90,219,15,5,83
+Dandelions,Ruth B.,alt z,2017,117,69,61,-3,9,45,234,2,3,90
+Perfect,Ed Sheeran,pop,2017,95,45,60,-6,11,17,263,16,2,90
+Shape of You,Ed Sheeran,pop,2017,96,65,83,-3,9,93,234,58,8,88
+Something Just Like This,The Chainsmokers,electropop,2017,103,64,62,-7,16,45,247,5,3,87
+Thunder,Imagine Dragons,modern rock,2017,168,82,61,-5,15,29,187,1,4,87
+Beggin',Måneskin,indie rock italiano,2017,134,80,71,-5,36,59,212,13,5,86
+HUMBLE.,Kendrick Lamar,conscious hip hop,2017,150,62,91,-7,10,42,177,0,10,86
+Too Good At Goodbyes,Sam Smith,pop,2017,92,37,68,-8,17,48,201,64,4,86
+Treat You Better,Shawn Mendes,canadian pop,2017,83,82,44,-4,11,75,188,11,34,86
+LOVE. FEAT. ZACARI.,Kendrick Lamar,conscious hip hop,2017,126,59,80,-7,15,78,213,26,9,85
+Passionfruit,Drake,canadian hip hop,2017,112,46,81,-11,11,36,299,26,4,85
+Bored,Billie Eilish,art pop,2017,120,32,61,-13,8,11,181,90,5,84
+Delicate,Taylor Swift,pop,2017,95,40,75,-10,9,5,232,22,7,84
+Infinity,Jaymes Young,indie poptimism,2017,122,67,67,-7,30,49,238,15,4,84
+Jocelyn Flores,XXXTENTACION,emo rap,2017,134,39,87,-9,30,44,119,47,24,84
+lovely (with Khalid),Billie Eilish,art pop,2018,115,30,35,-10,10,12,200,93,3,90
+Call Out My Name,The Weeknd,canadian contemporary r&b,2018,134,59,46,-5,31,18,228,17,4,89
+One Kiss (with Dua Lipa),Calvin Harris,dance pop,2018,124,86,79,-3,8,59,215,4,11,88
+God's Plan,Drake,canadian hip hop,2018,77,45,75,-9,55,36,199,3,11,86
+Let Me Down Slowly,Alec Benjamin,alt z,2018,150,56,65,-6,12,48,169,74,3,86
+rockstar (feat. 21 Savage),Post Malone,dfw rap,2018,160,52,59,-6,13,13,218,12,7,86
+Shallow,Lady Gaga,art pop,2018,96,39,57,-6,23,32,216,37,3,86
+All The Stars (with SZA),Kendrick Lamar,conscious hip hop,2018,97,63,70,-5,9,55,232,6,6,85
+Lucid Dreams,Juice WRLD,chicago rap,2018,84,57,51,-7,34,22,240,35,20,85
+SICKO MODE,Travis Scott,hip hop,2018,155,73,83,-4,12,45,313,1,22,85
+Happier,Marshmello,brostep,2018,100,79,69,-3,17,67,214,19,5,84
+Moonlight,XXXTENTACION,emo rap,2018,128,54,92,-6,10,71,135,56,8,84
+we fell in love in october,girl in red,alt z,2018,130,37,57,-13,16,24,184,11,3,84
+a lot,21 Savage,atl hip hop,2018,146,64,84,-8,34,27,289,4,9,83
+Better Now,Post Malone,dfw rap,2018,145,58,68,-6,14,34,231,33,4,83
+Cruel Summer,Taylor Swift,pop,2019,170,70,55,-6,11,56,178,12,16,91
+All Of The Girls You Loved Before,Taylor Swift,pop,2019,96,47,72,-10,13,40,221,71,4,90
+Watermelon Sugar,Harry Styles,pop,2019,95,82,55,-4,34,56,174,12,5,90
+Someone You Loved,Lewis Capaldi,pop,2019,110,41,50,-6,11,45,182,75,3,89
+Circles,Post Malone,dfw rap,2019,120,76,70,-3,9,55,215,19,4,88
+Lover,Taylor Swift,pop,2019,69,54,36,-8,12,45,221,49,9,88
+7 rings,Ariana Grande,pop,2019,140,32,78,-11,9,33,179,59,33,86
+Adore You,Harry Styles,pop,2019,99,77,68,-4,10,57,207,2,5,86
+Before You Go,Lewis Capaldi,pop,2019,112,57,46,-5,9,18,215,60,6,86
+everything i wanted,Billie Eilish,art pop,2019,120,23,70,-14,11,24,245,90,10,86
+Lost in the Fire (feat. The Weeknd),Gesaffelstein,dark clubbing,2019,101,67,66,-12,12,17,202,9,4,85
+when the party's over,Billie Eilish,art pop,2019,83,11,37,-14,9,20,196,98,10,85
+bad guy,Billie Eilish,art pop,2019,135,43,70,-11,10,56,194,33,38,84
+Doin' Time,Lana Del Rey,art pop,2019,145,56,64,-11,9,52,202,40,4,84
+EARFQUAKE,"Tyler, The Creator",hip hop,2019,80,50,55,-9,80,41,190,23,7,84
+Blinding Lights,The Weeknd,canadian contemporary r&b,2020,171,73,51,-6,9,33,200,0,6,92
+Heat Waves,Glass Animals,gauze pop,2020,81,53,76,-7,9,53,239,44,9,90
+Save Your Tears,The Weeknd,canadian contemporary r&b,2020,118,83,68,-5,54,64,216,2,3,89
+Heather,Conan Gray,bedroom pop,2020,102,43,36,-7,32,27,198,58,3,88
+MIDDLE OF THE NIGHT,Elley Duhé,alt z,2020,186,61,41,-8,12,9,184,2,5,87
+telepatía,Kali Uchis,colombian pop,2020,84,52,65,-9,20,55,160,11,5,86
+Levitating (feat. DaBaby),Dua Lipa,dance pop,2020,103,83,70,-4,7,92,203,1,6,85
+Godzilla (feat. Juice WRLD),Eminem,detroit hip hop,2020,166,75,81,-5,29,83,211,14,34,84
+Levitating,Dua Lipa,dance pop,2020,103,88,70,-2,21,91,204,6,8,84
+positions,Ariana Grande,pop,2020,144,80,74,-5,9,68,172,47,9,84
+death bed (coffee for your head),Powfu,sad lo-fi,2020,144,43,73,-9,70,35,173,73,14,83
+Don't Start Now,Dua Lipa,dance pop,2020,124,79,79,-5,10,68,183,1,8,83
+Dynamite,BTS,k-pop,2020,114,77,75,-4,9,74,199,1,10,83
+Heartbreak Anniversary,Giveon,r&b,2020,89,47,45,-9,30,54,198,52,8,83
+Lose You To Love Me,Selena Gomez,pop,2020,103,34,49,-9,21,10,206,56,4,83
+Ghost,Justin Bieber,canadian pop,2021,154,74,60,-6,42,44,153,19,5,88
+Shivers,Ed Sheeran,pop,2021,141,86,79,-3,4,82,208,28,9,88
+Bad Habits,Ed Sheeran,pop,2021,126,89,81,-4,37,54,231,5,3,87
+Happier Than Ever,Billie Eilish,art pop,2021,81,23,33,-9,13,30,299,77,3,87
+STAY (with Justin Bieber),The Kid LAROI,australian hip hop,2021,170,76,59,-5,10,48,142,4,5,87
+traitor,Olivia Rodrigo,pop,2021,101,34,38,-8,12,8,229,69,3,87
+Where Are You Now,Lost Frequencies,belgian edm,2021,121,64,67,-8,17,26,148,52,10,87
+Woman,Doja Cat,dance pop,2021,108,76,82,-4,12,88,173,9,9,87
+Cold Heart - PNAU Remix,Elton John,glam rock,2021,116,80,80,-6,10,94,203,3,3,86
+deja vu,Olivia Rodrigo,pop,2021,181,61,44,-7,37,18,216,58,11,86
+drivers license,Olivia Rodrigo,pop,2021,144,43,56,-9,11,14,242,77,6,86
+Fair Trade (with Travis Scott),Drake,canadian hip hop,2021,168,47,67,-9,22,29,291,5,26,86
+good 4 u,Olivia Rodrigo,pop,2021,167,66,56,-5,8,69,178,34,15,86
+STAY (with Justin Bieber),The Kid LAROI,australian hip hop,2021,170,76,59,-5,10,48,142,4,5,86
+Until I Found You,Stephen Sanchez,gen z singer-songwriter,2021,101,51,54,-6,17,23,178,73,3,86
+Creepin' (with The Weeknd & 21 Savage),Metro Boomin,rap,2022,98,62,72,-6,8,17,222,42,5,96
+Calm Down (with Selena Gomez),Rema,afrobeats,2022,107,81,80,-5,11,80,239,38,4,95
+Anti-Hero,Taylor Swift,pop,2022,97,64,64,-7,14,53,201,13,5,94
+Here With Me,d4vd,bedroom pop,2022,132,47,57,-8,13,29,242,53,3,94
+I'm Good (Blue),David Guetta,big room,2022,128,97,56,-4,37,30,175,0,3,94
+Kill Bill,SZA,pop,2022,89,74,64,-6,16,42,154,5,4,94
+I Ain't Worried,OneRepublic,piano rock,2022,140,80,70,-6,5,83,148,8,5,93
+Quevedo: Bzrp Music Sessions Vol. 52,Bizarrap,argentine hip hop,2022,128,78,62,-6,23,55,199,1,4,93
+Until I Found You (with Em Beihold) - Em Beihold Version,Stephen Sanchez,gen z singer-songwriter,2022,101,55,55,-5,20,34,176,78,3,93
+As It Was,Harry Styles,pop,2022,174,73,52,-5,31,66,167,34,6,92
+Me Porto Bonito,Bad Bunny,reggaeton,2022,92,71,91,-5,9,43,179,9,8,92
+Players,Coi Leray,new jersey underground rap,2022,105,52,95,-6,5,62,140,3,16,92
+Escapism.,RAYE,uk contemporary r&b,2022,96,74,54,-5,9,25,272,14,11,91
+Ojitos Lindos,Bad Bunny,reggaeton,2022,80,69,65,-6,53,27,258,8,4,91
+Unholy (feat. Kim Petras),Sam Smith,pop,2022,131,47,71,-7,27,24,157,1,9,91
+Flowers,Miley Cyrus,pop,2023,118,68,71,-4,3,65,200,6,7,98
+Cupid - Twin Ver.,FIFTY FIFTY,k-pop girl group,2023,120,59,78,-8,35,73,174,44,3,97
+BESO,ROSALÍA,pop,2023,95,64,77,-7,17,53,195,74,14,96
+Boy's a liar Pt. 2,PinkPantheress,bronx drill,2023,133,81,70,-8,25,86,131,25,5,96
+Daylight,David Kushner,gen z singer-songwriter,2023,130,43,51,-9,9,32,213,83,3,96
+TQG,KAROL G,reggaeton,2023,180,63,72,-4,9,61,199,67,28,96
+Die For You - Remix,The Weeknd,canadian contemporary r&b,2023,67,53,53,-6,44,50,233,23,7,93
+Search & Rescue,Drake,canadian hip hop,2023,142,44,82,-8,33,54,272,6,7,91
+Last Night,Morgan Wallen,contemporary country,2023,204,68,52,-5,15,52,164,46,4,90
+Yandel 150,Yandel,latin hip hop,2023,168,73,78,-4,10,58,216,5,7,90
+Double Fantasy (with Future),The Weeknd,canadian contemporary r&b,2023,119,57,60,-7,50,10,268,1,3,89
+Eyes Closed,Ed Sheeran,pop,2023,107,53,78,-6,11,39,195,30,6,89
+Never Felt So Alone,Labrinth,indie poptimism,2023,98,41,44,-4,38,36,160,50,5,89
+Heaven,Niall Horan,pop,2023,92,76,57,-3,33,68,186,7,3,87
+FLOWER,JISOO,k-pop,2023,124,38,84,-8,7,60,173,2,4,86
