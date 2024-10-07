@@ -7,12 +7,21 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>INFO 3300: Project 1</title>
   <link rel="stylesheet" href="style.css">
-  <!-- html5 boilerplate, feel free to delete unnecessary lines -->
+  <style>
+    .gridlines line {
+        stroke: #bbb;
+    }
+
+    .gridlines .domain {
+        stroke: none;
+    }
+</style>
   <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 
 <body>
   <p>test</p>
+  <svg id="songs" height="500" width="800"> </svg>
   <script>
     d3.csv('15Songs20to23.csv', d3.autoType)
       .then((data) => {
@@ -25,13 +34,49 @@
         const chartWidth = width - margins.left - margins.right;
         const chartHeight = height - margins.top - margins.bottom;
         let chartArea = svg.append("g")
-            .attr("transform", "translate(" + margins.left + "," + margins.top + ")");
+          .attr("transform", "translate(" + margins.left + "," + margins.top + ")");
+
+        const xExtent = d3.extent(data, d => d['year']);
+        const xScale = d3.scaleLinear().domain(xExtent)
+          .range([0, chartWidth]);
+
+        const yScale = d3.scaleLinear()
+          .domain([0, 100])
+          .range([chartHeight, 0]);
+
+        let leftAxis = d3.axisLeft(yScale);
+        svg.append('g')
+          .attr('class', 'y axis')
+          .attr('transform', `translate(${margins.left - 10},${margins.top})`)
+          .call(leftAxis);
+
+        let leftGridlines = d3.axisLeft(yScale)
+          .tickSize(-chartWidth - 10)
+          .tickFormat('');
+        svg.append('g')
+          .attr('class', 'y gridlines')
+          .attr('transform', `translate(${margins.left - 10},${margins.top})`)
+          .call(leftGridlines);
+
+        let bottomAxis = d3.axisBottom(xScale).ticks(17)
+        let element = svg.append('g')
+          .attr('class', 'x axis')
+          .attr('transform', `translate(${margins.left},${chartHeight + margins.top + 10})`)
+          .call(bottomAxis)
+
+        let bottomGridlines = d3.axisBottom(xScale)
+          .tickSize(-chartHeight - 10)
+          .tickFormat('')
+          .ticks(17);
+        svg.append('g')
+          .attr('class', 'x gridlines')
+          .attr('transform', `translate(${margins.left},${chartHeight + margins.top + 10})`)
+          .call(bottomGridlines);
 
 
 
 
 
-        
       });
   </script>
 </body>
