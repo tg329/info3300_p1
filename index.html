@@ -9,11 +9,7 @@
   <link rel="stylesheet" href="style.css">
   <style>
     .gridlines line {
-      stroke: #bbb;
-    }
-
-    .gridlines .domain {
-      stroke: none;
+      stroke: #e2e2e2;
     }
   </style>
   <script src="https://d3js.org/d3.v7.min.js"></script>
@@ -21,7 +17,7 @@
 
 <body>
   <p>test</p>
-  <svg id="songs" height="600" width="800"> </svg>
+  <svg id="songs" height="600" width="800"></svg>
   <script>
     d3.csv('15Songs20to23.csv', d3.autoType)
       .then((data) => {
@@ -30,7 +26,7 @@
         const svg = d3.select("svg#songs");
         const width = svg.attr("width");
         const height = svg.attr("height");
-        const margins = { top: 10, right: 20, bottom: 50, left: 50 };
+        const margins = { top: 10, right: 10, bottom: 50, left: 50 };
         const chartWidth = width - margins.left - margins.right;
         const chartHeight = height - margins.top - margins.bottom;
         let chartArea = svg.append("g")
@@ -58,8 +54,8 @@
           .attr('transform', `translate(${margins.left},${margins.top})`)
           .call(leftGridlines);
 
-        let bottomAxis = d3.axisBottom(xScale).ticks(20)
-        .tickFormat(d3.format("d")) 
+        let bottomAxis = d3.axisBottom(xScale)
+          .tickFormat(d3.format("d"))
         let element = svg.append('g')
           .attr('class', 'x axis')
           .attr('transform', `translate(${margins.left},${chartHeight + margins.top})`)
@@ -74,7 +70,16 @@
           .attr('transform', `translate(${margins.left},${chartHeight + margins.top})`)
           .call(bottomGridlines);
 
+        svg.append("text")
+          .attr("x", margins.left + chartWidth / 2)
+          .attr("y", chartHeight + margins.top + 45)
+          .text("Year");
 
+        svg.append("text")
+          .attr("x", -(margins.top + chartHeight / 2))
+          .attr("y", 16)
+          .attr("transform", "rotate(-90)")
+          .text("Danceability");
 
 
 
