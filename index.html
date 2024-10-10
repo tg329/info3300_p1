@@ -40,6 +40,7 @@
         const xScale = d3.scaleLinear().domain(xExtent)
           .range([0, chartWidth]);
 
+        yExtent = d3.extent(data, d => d['danceability'])
         const yScale = d3.scaleLinear()
           .domain([0, 100])
           .range([chartHeight, 0]);
@@ -59,7 +60,7 @@
           .call(leftGridlines);
 
         let bottomAxis = d3.axisBottom(xScale).ticks(20)
-        .tickFormat(d3.format("d")) 
+          .tickFormat(d3.format("d"))
         let element = svg.append('g')
           .attr('class', 'x axis')
           .attr('transform', `translate(${margins.left},${chartHeight + margins.top})`)
@@ -73,10 +74,6 @@
           .attr('class', 'x gridlines')
           .attr('transform', `translate(${margins.left},${chartHeight + margins.top})`)
           .call(bottomGridlines);
-
-
-
-
 
       });
   </script>
