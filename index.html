@@ -36,6 +36,7 @@
         const xScale = d3.scaleLinear().domain(xExtent)
           .range([0, chartWidth]);
 
+        yExtent = d3.extent(data, d => d['danceability'])
         const yScale = d3.scaleLinear()
           .domain([0, 100])
           .range([chartHeight, 0]);
