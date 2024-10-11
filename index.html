@@ -16,7 +16,6 @@
 </head>
 
 <body>
-  <p>test</p>
   <svg id="songs" height="600" width="800"></svg>
   <script>
     d3.csv('15Songs20to23.csv', d3.autoType)
@@ -36,10 +35,24 @@
         const xScale = d3.scaleLinear().domain(xExtent)
           .range([0, chartWidth]);
 
-        yExtent = d3.extent(data, d => d['danceability'])
+        const yExtent = d3.extent(data, d => d['danceability']);
         const yScale = d3.scaleLinear()
-          .domain([0, 100])
+          .domain(yExtent)
           .range([chartHeight, 0]);
+
+        const bpmExtent = d3.extent(data, d => d['bpm']);
+        const colorScale = d3.scaleSequential(d3.interpolatePlasma)
+          .domain(bpmExtent);
+
+        data.forEach((d, i) => {
+          chartArea.append('circle')
+            .attr('cx', xScale(d['year']))
+            .attr('cy', yScale(d['danceability']))
+            .attr('r', 6)
+            .attr('opacity', 0.5)
+            .attr('index', i)
+            .style('fill', colorScale(d['bpm']));
+        });
 
         let leftAxis = d3.axisLeft(yScale);
         svg.append('g')
@@ -82,8 +95,7 @@
           .attr("transform", "rotate(-90)")
           .text("Danceability");
 
-
-
+        chartArea.raise()
       });
   </script>
 </body>
