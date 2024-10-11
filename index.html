@@ -140,14 +140,15 @@
       <svg id="colorLegend" height="70" width="760"></svg>
       <svg id="songs" height="600" width="800"></svg>
       <p class="graph-desc">
-        add description here
+
+        This graph visualizes the impact of valence (how positive a song feels) and energy (a measure of intensity and activity, from 0% to 100%) on a song's danceability, which reflects how suitable a track is for dancing, based on factors like tempo, rhythm stability, beat strength, and regularity. From this graph, we can see that a higher energy song that feels more positive is generally associated with a higher danceability rating.
       </p>
 
 
       <h4>average dancability over the years</h4>
       <svg id="lineGraph" height="600" width="800"></svg>
       <p class="graph-desc">
-        add description here
+        This graph measures average danceability over the years, showing trends with noticeable dips and peaks, the lowest occurring in 2012-2013 and the highest in 2018 and 2022.
       </p>
       <!--  ########## SCATTER GRAPH: ########## -->
       <script>
@@ -345,7 +346,7 @@
             // xaxis
             svg.append("text")
               .attr("x", margins.left + (chartWidth / 2))
-              .attr("y", chartHeight + margins.top + 46)
+              .attr("y", chartHeight + margins.top + 48)
               .attr("text-anchor", "middle")
               .attr("fill", "#984f4f")
               .text("year");
@@ -353,7 +354,7 @@
             // yaxis
             svg.append("text")
               .attr("x", -(margins.top + chartHeight / 2))
-              .attr("y", 16)
+              .attr("y", 10)
               .attr("transform", "rotate(-90)")
               .attr("text-anchor", "middle")
               .attr("fill", "#984f4f")
