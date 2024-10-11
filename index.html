@@ -17,18 +17,35 @@
       stroke: steelblue;
       stroke-width: 2px;
     }
+
+    body {
+      font-family: 'whitney','Segoe UI', sans-serif;
+        color: #222; 
+    }
+
+    text{
+      font-weight:bold;
+    }
+
+    h3{
+      margin-left:50px;
+    }
+
   </style>
   <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 
 <body>
+  <h3>Danceability of Top 100 Songs Throughout the Years (2000-2023)</h3>
   <svg id="songs" height="600" width="800"></svg>
+  <svg id="colorLegend" height="70" width="760"
+    style="background: #fff; margin-top: 10px;margin-bottom:60px; margin-left:40px"></svg>
   <svg id="lineGraph" height="600" width="800"></svg>
+
   <script>
     d3.csv('15Songs20to23.csv', d3.autoType)
       .then((data) => {
         console.log(data);
-
         const svg = d3.select("svg#songs");
         const width = svg.attr("width");
         const height = svg.attr("height");
@@ -44,7 +61,7 @@
 
         const yExtent = d3.extent(data, d => d['danceability']);
         const yScale = d3.scaleLinear()
-          .domain(yExtent)
+          .domain([0, 100])
           .range([chartHeight, 0]);
 
         // SCATTER GRAPH
@@ -52,15 +69,15 @@
         const colorScale = d3.scaleSequential(d3.interpolatePlasma)
           .domain(bpmExtent);
 
-        data.forEach((d, i) => {
-          chartArea.append('circle')
-            .attr('cx', xScale(d['year']))
-            .attr('cy', yScale(d['danceability']))
-            .attr('r', 6)
-            .attr('opacity', 0.5)
-            .attr('index', i)
-            .style('fill', colorScale(d['bpm']));
-        });
+        const circles = chartArea.selectAll('circle')
+          .data(data)
+          .join('circle')
+          .attr('cx', d => xScale(d['year']))
+          .attr('cy', d => yScale(d['danceability']))
+          .attr('r', 6)
+          .attr('opacity', 0.5)
+          .style('fill', d => colorScale(d['bpm']));
+
         // GRID LINES
         let leftAxis = d3.axisLeft(yScale);
         svg.append('g')
@@ -96,14 +113,19 @@
         svg.append("text")
           .attr("x", margins.left + chartWidth / 2)
           .attr("y", chartHeight + margins.top + 45)
+          .attr("text-anchor", "middle")
           .text("Year");
 
         svg.append("text")
           .attr("x", -(margins.top + chartHeight / 2))
           .attr("y", 16)
           .attr("transform", "rotate(-90)")
+          .attr("text-anchor", "middle")
           .text("Danceability");
 
+        console.log(d3.extent(data, d => d['bpm']))
+
+        drawLegend("#colorLegend", colorScale);
 
         // LINE GRAPH:
         // calculating average dancability over the years
@@ -186,17 +208,138 @@
         lineSvg.append("text")
           .attr("x", margins.left + (width - margins.left - margins.right) / 2)
           .attr("y", lineChartHeight + margins.top + 45)
+          .attr("text-anchor", "middle")
           .text("Year");
 
         lineSvg.append("text")
           .attr("x", -(margins.top + lineChartHeight / 2))
           .attr("y", 16)
           .attr("transform", "rotate(-90)")
+          .attr("text-anchor", "middle")
           .text("Average Danceability");
 
         chartArea.raise();
+        lineChartArea.raise();
+
       });
   </script>
+
+
+  <script>
+    function drawLegend(legendSelector, legendColorScale) {
+      const offsets = {
+        width: 10,
+        top: 0,
+        bottom: 25
+      };
+      const stepSize = 4;
+      const minMaxExtendPercent = 0;
+      const legend = d3.select(legendSelector);
+      const legendHeight = legend.attr("height");
+      const legendBarWidth = legend.attr("width") - (offsets.width * 2);
+      const legendMinMax = d3.extent(legendColorScale.domain());
+      const minMaxExtension = (legendMinMax[1] - legendMinMax[0]) * minMaxExtendPercent;
+      const barHeight = legendHeight - offsets.top - offsets.bottom;
+
+      let barScale = d3.scaleLinear().domain([legendMinMax[0] - minMaxExtension,
+      legendMinMax[1] + minMaxExtension])
+        .range([0, legendBarWidth]);
+      let barAxis = d3.axisBottom(barScale);
+
+      let bar = legend.append("g")
+        .attr("class", "legend colorbar")
+        .attr("transform", `translate(${offsets.width},${offsets.top})`)
+
+      if (legendColorScale.hasOwnProperty('thresholds') || legendColorScale.hasOwnProperty('quantiles')) {
+        let thresholds = [];
+        if (legendColorScale.hasOwnProperty('thresholds')) { thresholds = legendColorScale.thresholds() }
+        else { thresholds = legendColorScale.quantiles() }
+
+        const barThresholds = [legendMinMax[0], ...thresholds, legendMinMax[1]];
+
+        barAxis.tickValues(barThresholds);
+
+        for (let i = 0; i < barThresholds.length - 1; i++) {
+          let dataStart = barThresholds[i];
+          let dataEnd = barThresholds[i + 1];
+          let pixelStart = barAxis.scale()(dataStart);
+          let pixelEnd = barAxis.scale()(dataEnd);
+
+          bar.append("rect")
+            .attr("x", pixelStart)
+            .attr("y", 0)
+            .attr("width", pixelEnd - pixelStart)
+            .attr("height", barHeight)
+            .style("fill", legendColorScale((dataStart + dataEnd) / 2.0));
+        }
+      }
+      else if (legendColorScale.hasOwnProperty('rangeRound')) {
+
+        for (let i = 0; i < legendBarWidth; i = i + stepSize) {
+
+          let center = i + (stepSize / 2);
+          let dataCenter = barAxis.scale().invert(center);
+
+          if (dataCenter < legendMinMax[0]) {
+            bar.append("rect")
+              .attr("x", i)
+              .attr("y", 0)
+              .attr("width", stepSize)
+              .attr("height", barHeight)
+              .style("fill", legendColorScale(legendMinMax[0]));
+          }
+          else if (dataCenter < legendMinMax[1]) {
+            bar.append("rect")
+              .attr("x", i)
+              .attr("y", 0)
+              .attr("width", stepSize)
+              .attr("height", barHeight)
+              .style("fill", legendColorScale(dataCenter));
+          }
+          else {
+            bar.append("rect")
+              .attr("x", i)
+              .attr("y", 0)
+              .attr("width", stepSize)
+              .attr("height", barHeight)
+              .style("fill", legendColorScale(legendMinMax[1]));
+          }
+
+        }
+      }
+      else {
+        let nomVals = legendColorScale.domain().sort();
+
+        let barScale = d3.scaleBand().domain(nomVals)
+          .range([0, legendBarWidth])
+          .padding(0.05);
+        barAxis.scale(barScale);
+
+        nomVals.forEach(d => {
+          bar.append("rect")
+            .attr("x", barScale(d))
+            .attr("y", 0)
+            .attr("width", barScale.bandwidth())
+            .attr("height", barHeight)
+            .style("fill", legendColorScale(d));
+        });
+      }
+      legend.append("g")
+        .attr("class", "legend axis")
+        .attr("transform", `translate(${offsets.width},${offsets.top + barHeight})`)
+        .call(barAxis);
+
+      legend.append("text")
+        .attr("x", offsets.width + (legendBarWidth / 2)) 
+        .attr("y", 30) 
+        .attr("text-anchor", "middle")
+        .style("fill", "white")
+        .text("BPM"); 
+
+    }
+
+  </script>
+
 </body>
 
 </html>
