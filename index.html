@@ -32,20 +32,36 @@
     }
 
     h3 {
+      font-size: 40px;
+      color: #f3e5e5;
+      text-transform: lowercase;
+      text-align: center;
+      margin:10px;
+    }
+
+    .style-h {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
       margin-left: 0px;
       margin-right: 0px;
       margin-bottom: 0px;
       margin-top: 50px;
-      font-size: 40px;
-      color: #f3e5e5;
       width: 78%;
-      text-transform: lowercase;
-      text-align: center;
       background-color: #d6afaf;
       padding: 68px;
-      padding-top: 80px;
       border-top-left-radius: 80px;
       border-top-right-radius: 80px;
+      text-align: center;
+    }
+
+    p {
+      margin: 0px;
+      font-size: 23px;
+      color: #f3e5e5;
+      text-transform: lowercase;
+      text-align: center;
+
     }
 
     .main {
@@ -82,8 +98,10 @@
   <div class="main">
 
 
-    <h3>Dancability of the Top 100 Songs <br>
-      (2000-2023)</h3>
+    <div class="style-h">
+      <h3>Dancability of the Top 100 Songs</h3>
+      <p>(2000 to 2023)</p>
+    </div>
     <div class="all-graphs">
       <svg id="colorLegend" height="70" width="760"></svg>
       <svg id="songs" height="600" width="800"></svg>
