@@ -36,7 +36,7 @@
       color: #f3e5e5;
       text-transform: lowercase;
       text-align: center;
-      margin:10px;
+      margin: 10px;
     }
 
     .style-h {
@@ -96,24 +96,25 @@
 <body>
 
   <div class="main">
-
-
     <div class="style-h">
       <h3>Dancability of the Top 100 Songs</h3>
       <p>(2000 to 2023)</p>
     </div>
     <div class="all-graphs">
+
+      <!--  ########## SVG ELEMENTS GRAPH: ########## -->
       <svg id="colorLegend" height="70" width="760"></svg>
       <svg id="songs" height="600" width="800"></svg>
       <svg id="lineGraph" height="600" width="800"></svg>
 
+      <!--  ########## SCATTER GRAPH: ########## -->
       <script>
         function jitter() {
           return Math.floor(Math.random() * 7) - 3;
         }
         d3.csv('15Songs20to23.csv', d3.autoType)
           .then((data) => {
-            console.log(data);
+            // console.log(data);
             const svg = d3.select("svg#songs");
             const width = svg.attr("width");
             const height = svg.attr("height");
@@ -195,16 +196,38 @@
 
             drawLegend("#colorLegend", colorScale);
 
-            // LINE GRAPH:
-            // calculating average dancability over the years
+            chartArea.raise();
+
+          });
+      </script>
+
+      <!--  ########## LINE GRAPH: ########## -->
+      <script>
+        d3.dsv(';', 'bestSongs.csv', d3.autoType)
+          .then((data) => {
+            console.log(data);
+
+            const svg = d3.select("svg#lineGraph");
+            const width = +svg.attr("width");
+            const height = +svg.attr("height");
+            const margins = { top: 10, right: 10, bottom: 50, left: 50 };
+            const chartWidth = width - margins.left - margins.right;
+            const chartHeight = height - margins.top - margins.bottom;
+            let chartArea = svg.append("g")
+              .attr("transform", `translate(${margins.left}, ${margins.top})`);
+
+            // calculating average danceability over the years
             const danceByYear = d3.groups(data, d => d.year)
               .map(([year, values]) => ({
                 year: year,
-                avgDanceability: d3.mean(values, d => d.danceability)
-              }));
+                avgDanceability: d3.mean(values, d => d['danceability '])
+              }))
+              .filter(d => d.year >= 2000 && d.year <= 2023)
+              .sort((a, b) => a.year - b.year);
+            console.log(danceByYear);
 
-            const lineSvg = d3.select("svg#lineGraph");
-            const lineChartHeight = height - margins.top - margins.bottom;
+            const lineChartArea = chartArea.append("g");
+
             const xYearExtent = d3.extent(danceByYear, d => d.year);
             const xYearScale = d3.scaleLinear()
               .domain(xYearExtent)
@@ -212,15 +235,12 @@
 
             const yDanceExtent = d3.extent(danceByYear, d => d.avgDanceability);
             const yDanceScale = d3.scaleLinear()
-              .domain([58, 74])
-              .range([lineChartHeight, 0]);
+              .domain([62, 73])
+              .range([chartHeight, 0]);
 
             const lineGenerator = d3.line()
-              .x(d => xYearScale(d['year']))
+              .x(d => xYearScale(d.year))
               .y(d => yDanceScale(d.avgDanceability));
-
-            const lineChartArea = lineSvg.append("g")
-              .attr("transform", "translate(" + margins.left + "," + margins.top + ")");
 
             lineChartArea.append('path')
               .datum(danceByYear)
@@ -229,7 +249,7 @@
               .attr('stroke-width', 2)
               .attr('d', lineGenerator);
 
-            // add circles for the year on the line
+            // Add circles for each data point
             lineChartArea.selectAll('circle')
               .data(danceByYear)
               .enter()
@@ -237,7 +257,7 @@
               .attr('cx', d => xYearScale(d.year))
               .attr('cy', d => yDanceScale(d.avgDanceability))
               .attr('r', 3)
-              .attr('fill', '#7a6060')
+              .attr('fill', '#7a6060');
 
             let leftAxisDanceability = d3.axisLeft(yDanceScale)
               .ticks(20);
@@ -247,53 +267,61 @@
               .tickFormat('');
 
             let bottomLineGrid = d3.axisBottom(xYearScale)
-              .tickSize(-lineChartHeight)
+              .tickSize(-chartHeight)
               .tickFormat('')
               .ticks(10);
 
-            lineSvg.append('g')
+            chartArea.append('g')
               .attr('class', 'gridlines')
-              .attr('transform', `translate(${margins.left},${margins.top})`)
               .call(leftLineGrid);
-            lineSvg.append('g')
+
+            chartArea.append('g')
               .attr('class', 'gridlines')
-              .attr('transform', `translate(${margins.left},${lineChartHeight + margins.top})`)
+              .attr('transform', `translate(0, ${chartHeight})`)
               .call(bottomLineGrid);
 
-            lineSvg.append('g')
+            chartArea.append('g')
               .attr('class', 'y axis danceability')
-              .attr('transform', `translate(${margins.left},${margins.top})`)
               .call(leftAxisDanceability);
 
             let bottomAxisLineGraph = d3.axisBottom(xYearScale)
+              .ticks(20)
               .tickFormat(d3.format("d"));
-            lineSvg.append('g')
+
+            chartArea.append('g')
               .attr('class', 'x axis')
-              .attr('transform', `translate(${margins.left},${lineChartHeight + margins.top})`)
+              .attr('transform', `translate(0, ${chartHeight})`)
               .call(bottomAxisLineGraph);
 
-            lineSvg.append("text")
-              .attr("x", margins.left + (width - margins.left - margins.right) / 2)
-              .attr("y", lineChartHeight + margins.top + 45)
+            // tick direction 
+            chartArea.selectAll('.x.axis text')
+              .attr('transform', 'rotate(-45)')
+              .attr('text-anchor', 'end')
+              .attr('dx', '-0.5em')
+              .attr('dy', '0.5em');
+
+            // xaxis
+            svg.append("text")
+              .attr("x", margins.left + (chartWidth / 2))
+              .attr("y", chartHeight + margins.top + 46)
               .attr("text-anchor", "middle")
               .attr("fill", "#7a6060")
               .text("year");
 
-            lineSvg.append("text")
-              .attr("x", -(margins.top + lineChartHeight / 2))
+            // yaxis
+            svg.append("text")
+              .attr("x", -(margins.top + chartHeight / 2))
               .attr("y", 16)
               .attr("transform", "rotate(-90)")
               .attr("text-anchor", "middle")
               .attr("fill", "#7a6060")
               .text("average danceability");
 
-            chartArea.raise();
             lineChartArea.raise();
-
           });
       </script>
 
-
+      <!--  ########## LEGEND: ########## -->
       <script>
         function drawLegend(legendSelector, legendColorScale) {
           const offsets = {
