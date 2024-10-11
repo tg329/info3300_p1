@@ -123,7 +123,7 @@
 
         const yDanceExtent = d3.extent(danceByYear, d => d.avgDanceability);
         const yDanceScale = d3.scaleLinear()
-          .domain(yDanceExtent)
+          .domain([58, 74])
           .range([lineChartHeight, 0]);
 
         const lineGenerator = d3.line()
@@ -140,14 +140,42 @@
           .attr('stroke-width', 2)
           .attr('d', lineGenerator);
 
-        // Left y-axis for danceability
-        let leftAxisDanceability = d3.axisLeft(yDanceScale);
+        // add circles for the year on the line
+        lineChartArea.selectAll('circle')
+          .data(danceByYear)
+          .enter()
+          .append('circle')
+          .attr('cx', d => xYearScale(d.year))
+          .attr('cy', d => yDanceScale(d.avgDanceability))
+          .attr('r', 3)
+          .attr('fill', 'steelblue')
+
+        let leftAxisDanceability = d3.axisLeft(yDanceScale)
+          .ticks(20);
+
+        let leftLineGrid = d3.axisLeft(yDanceScale)
+          .tickSize(-chartWidth)
+          .tickFormat('');
+
+        let bottomLineGrid = d3.axisBottom(xYearScale)
+          .tickSize(-lineChartHeight)
+          .tickFormat('')
+          .ticks(10);
+
+        lineSvg.append('g')
+          .attr('class', 'gridlines')
+          .attr('transform', `translate(${margins.left},${margins.top})`)
+          .call(leftLineGrid);
+        lineSvg.append('g')
+          .attr('class', 'gridlines')
+          .attr('transform', `translate(${margins.left},${lineChartHeight + margins.top})`)
+          .call(bottomLineGrid);
+
         lineSvg.append('g')
           .attr('class', 'y axis danceability')
           .attr('transform', `translate(${margins.left},${margins.top})`)
           .call(leftAxisDanceability);
 
-        // Bottom x-axis for year
         let bottomAxisLineGraph = d3.axisBottom(xYearScale)
           .tickFormat(d3.format("d")); // Format years without decimal
         lineSvg.append('g')
@@ -155,20 +183,18 @@
           .attr('transform', `translate(${margins.left},${lineChartHeight + margins.top})`)
           .call(bottomAxisLineGraph);
 
-        // X-axis label (Year)
         lineSvg.append("text")
           .attr("x", margins.left + (width - margins.left - margins.right) / 2)
           .attr("y", lineChartHeight + margins.top + 45)
           .text("Year");
 
-        // Y-axis label (Danceability)
         lineSvg.append("text")
           .attr("x", -(margins.top + lineChartHeight / 2))
           .attr("y", 16)
           .attr("transform", "rotate(-90)")
           .text("Average Danceability");
 
-        chartArea.raise()
+        chartArea.raise();
       });
   </script>
 </body>
