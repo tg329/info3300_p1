@@ -11,12 +11,19 @@
     .gridlines line {
       stroke: #e2e2e2;
     }
+
+    .line {
+      fill: none;
+      stroke: steelblue;
+      stroke-width: 2px;
+    }
   </style>
   <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 
 <body>
   <svg id="songs" height="600" width="800"></svg>
+  <svg id="lineGraph" height="600" width="800"></svg>
   <script>
     d3.csv('15Songs20to23.csv', d3.autoType)
       .then((data) => {
@@ -40,6 +47,7 @@
           .domain(yExtent)
           .range([chartHeight, 0]);
 
+        // SCATTER GRAPH
         const bpmExtent = d3.extent(data, d => d['bpm']);
         const colorScale = d3.scaleSequential(d3.interpolatePlasma)
           .domain(bpmExtent);
@@ -53,7 +61,7 @@
             .attr('index', i)
             .style('fill', colorScale(d['bpm']));
         });
-
+        // GRID LINES
         let leftAxis = d3.axisLeft(yScale);
         svg.append('g')
           .attr('class', 'y axis')
@@ -63,6 +71,7 @@
         let leftGridlines = d3.axisLeft(yScale)
           .tickSize(-chartWidth)
           .tickFormat('');
+
         svg.append('g')
           .attr('class', 'y gridlines')
           .attr('transform', `translate(${margins.left},${margins.top})`)
@@ -94,6 +103,70 @@
           .attr("y", 16)
           .attr("transform", "rotate(-90)")
           .text("Danceability");
+
+
+        // LINE GRAPH:
+        // calculating average dancability over the years
+        const danceByYear = d3.groups(data, d => d.year)
+          .map(([year, values]) => ({
+            year: year,
+            avgDanceability: d3.mean(values, d => d.danceability)
+          }));
+
+        const lineSvg = d3.select("svg#lineGraph");
+        const lineChartHeight = height - margins.top - margins.bottom;
+        // X-axis: Update to represent 'year'
+        const xYearExtent = d3.extent(danceByYear, d => d.year);
+        const xYearScale = d3.scaleLinear()
+          .domain(xYearExtent)
+          .range([0, chartWidth]);
+
+        const yDanceExtent = d3.extent(danceByYear, d => d.avgDanceability);
+        const yDanceScale = d3.scaleLinear()
+          .domain(yDanceExtent)
+          .range([lineChartHeight, 0]);
+
+        const lineGenerator = d3.line()
+          .x(d => xYearScale(d['year']))
+          .y(d => yDanceScale(d.avgDanceability));
+
+        const lineChartArea = lineSvg.append("g")
+          .attr("transform", "translate(" + margins.left + "," + margins.top + ")");
+
+        lineChartArea.append('path')
+          .datum(danceByYear)
+          .attr('fill', 'none')
+          .attr('stroke', 'steelblue')
+          .attr('stroke-width', 2)
+          .attr('d', lineGenerator);
+
+        // Left y-axis for danceability
+        let leftAxisDanceability = d3.axisLeft(yDanceScale);
+        lineSvg.append('g')
+          .attr('class', 'y axis danceability')
+          .attr('transform', `translate(${margins.left},${margins.top})`)
+          .call(leftAxisDanceability);
+
+        // Bottom x-axis for year
+        let bottomAxisLineGraph = d3.axisBottom(xYearScale)
+          .tickFormat(d3.format("d")); // Format years without decimal
+        lineSvg.append('g')
+          .attr('class', 'x axis')
+          .attr('transform', `translate(${margins.left},${lineChartHeight + margins.top})`)
+          .call(bottomAxisLineGraph);
+
+        // X-axis label (Year)
+        lineSvg.append("text")
+          .attr("x", margins.left + (width - margins.left - margins.right) / 2)
+          .attr("y", lineChartHeight + margins.top + 45)
+          .text("Year");
+
+        // Y-axis label (Danceability)
+        lineSvg.append("text")
+          .attr("x", -(margins.top + lineChartHeight / 2))
+          .attr("y", 16)
+          .attr("transform", "rotate(-90)")
+          .text("Average Danceability");
 
         chartArea.raise()
       });
