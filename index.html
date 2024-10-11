@@ -187,7 +187,6 @@
 
             const lineSvg = d3.select("svg#lineGraph");
             const lineChartHeight = height - margins.top - margins.bottom;
-            // X-axis: Update to represent 'year'
             const xYearExtent = d3.extent(danceByYear, d => d.year);
             const xYearScale = d3.scaleLinear()
               .domain(xYearExtent)
@@ -249,7 +248,7 @@
               .call(leftAxisDanceability);
 
             let bottomAxisLineGraph = d3.axisBottom(xYearScale)
-              .tickFormat(d3.format("d")); // Format years without decimal
+              .tickFormat(d3.format("d"));
             lineSvg.append('g')
               .attr('class', 'x axis')
               .attr('transform', `translate(${margins.left},${lineChartHeight + margins.top})`)
