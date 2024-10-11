@@ -14,29 +14,35 @@
 
     .line {
       fill: none;
-      stroke: #7a6060;
+      stroke: #984f4f;
       stroke-width: 2px;
     }
 
     body {
-      color: #4f3839;
-      background-color: #7a6060;
-      width: 960px;
+      color: #633638;
+      background-color: #815454;
       margin: auto;
       font-family: 'Trebuchet MS', sans-serif;
     }
 
     text {
       font-weight: bold;
-      color: #7b6d6d
+      color: #792e2e
     }
 
     h3 {
       font-size: 40px;
-      color: #f3e5e5;
+      color: #fffbfb;
       text-transform: lowercase;
       text-align: center;
       margin: 10px;
+    }
+
+    h4 {
+      font-size: 28px;
+      color: #ce8d8d;
+      margin: 0px;
+      margin-bottom: 30px;
     }
 
     .style-h {
@@ -47,18 +53,18 @@
       margin-right: 0px;
       margin-bottom: 0px;
       margin-top: 50px;
-      width: 78%;
-      background-color: #d6afaf;
+      width: 850px;
+      background-color: #db9b9b;
       padding: 68px;
       border-top-left-radius: 80px;
       border-top-right-radius: 80px;
       text-align: center;
     }
 
-    p {
+    .h-descr {
       margin: 0px;
       font-size: 23px;
-      color: #f3e5e5;
+      color: #fffbfb;
       text-transform: lowercase;
       text-align: center;
 
@@ -72,22 +78,49 @@
 
     .all-graphs {
       display: flex;
+      font-style: oblique;
       flex-direction: column;
       align-items: center;
       background-color: #F4F3EE;
-      padding: 43px;
-      border-bottom-left-radius: 80px;
-      border-bottom-right-radius: 80px;
-      margin-bottom: 80px;
-    }
-
-    #lineGraph {
-      margin-top: 50px;
+      padding: 93px;
+      padding-top: 60px;
+      padding-bottom: 10px;
+      border-bottom-left-radius: 25px;
+      border-bottom-right-radius: 25px;
+      margin-bottom: 30px;
     }
 
     #colorLegend {
-      margin-top: 10px;
+      margin: 0px;
       margin-left: 40px
+    }
+
+    .group-members {
+      display: flex;
+      flex-direction: column;
+      gap: 0px;
+      padding: 30px;
+      background-color: #db9b9b60;
+      text-align: center;
+      margin-bottom: 80px;
+      border-radius: 35px;
+    }
+
+    .gm-decr {
+      margin: 0px;
+      padding: 5px;
+      font-size: 18px;
+      color: #2b060665
+    }
+
+    .graph-desc {
+      color: #cd8989;
+      font-size: 12px;
+      padding: 18px;
+      margin: 30px;
+      margin-bottom: 80px;
+      background-color: #db9b9b30;
+      border-radius: 10px;
     }
   </style>
   <script src="https://d3js.org/d3.v7.min.js"></script>
@@ -98,15 +131,24 @@
   <div class="main">
     <div class="style-h">
       <h3>Dancability of the Top 100 Songs</h3>
-      <p>(2000 to 2023)</p>
+      <p class="h-descr">(2000 to 2023)</p>
     </div>
     <div class="all-graphs">
 
       <!--  ########## SVG ELEMENTS GRAPH: ########## -->
+      <h4>valence and energy's effect on dancability</h4>
       <svg id="colorLegend" height="70" width="760"></svg>
       <svg id="songs" height="600" width="800"></svg>
-      <svg id="lineGraph" height="600" width="800"></svg>
+      <p class="graph-desc">
+        add description here
+      </p>
 
+
+      <h4>average dancability over the years</h4>
+      <svg id="lineGraph" height="600" width="800"></svg>
+      <p class="graph-desc">
+        add description here
+      </p>
       <!--  ########## SCATTER GRAPH: ########## -->
       <script>
         function jitter() {
@@ -183,14 +225,14 @@
               .attr("x", margins.left + chartWidth / 2)
               .attr("y", chartHeight + margins.top + 45)
               .attr("text-anchor", "middle")
-              .attr("fill", "#7a6060")
+              .attr("fill", "#984f4f")
               .text("energy");
 
             svg.append("text")
               .attr("x", -(margins.top + chartHeight / 2))
               .attr("y", 16)
               .attr("transform", "rotate(-90)")
-              .attr("fill", "#7a6060")
+              .attr("fill", "#984f4f")
               .attr("text-anchor", "middle")
               .text("danceability");
 
@@ -245,7 +287,7 @@
             lineChartArea.append('path')
               .datum(danceByYear)
               .attr('fill', 'none')
-              .attr('stroke', '#7a6060')
+              .attr('stroke', '#984f4f')
               .attr('stroke-width', 2)
               .attr('d', lineGenerator);
 
@@ -257,7 +299,7 @@
               .attr('cx', d => xYearScale(d.year))
               .attr('cy', d => yDanceScale(d.avgDanceability))
               .attr('r', 3)
-              .attr('fill', '#7a6060');
+              .attr('fill', '#984f4f');
 
             let leftAxisDanceability = d3.axisLeft(yDanceScale)
               .ticks(20);
@@ -305,7 +347,7 @@
               .attr("x", margins.left + (chartWidth / 2))
               .attr("y", chartHeight + margins.top + 46)
               .attr("text-anchor", "middle")
-              .attr("fill", "#7a6060")
+              .attr("fill", "#984f4f")
               .text("year");
 
             // yaxis
@@ -314,7 +356,7 @@
               .attr("y", 16)
               .attr("transform", "rotate(-90)")
               .attr("text-anchor", "middle")
-              .attr("fill", "#7a6060")
+              .attr("fill", "#984f4f")
               .text("average danceability");
 
             lineChartArea.raise();
@@ -436,6 +478,11 @@
         }
       </script>
     </div>
+    <div class="group-members">
+      <p class="gm-decr"><b>project members</b></p>
+      <p class="gm-decr">nicole lin (njl55,) shihan gao (tg329), elaine wu (ew457), jolly zheng (jz767)</p>
+    </div>
+
   </div>
 </body>
 
